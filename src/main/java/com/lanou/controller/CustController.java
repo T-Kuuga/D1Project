@@ -43,6 +43,8 @@ public class CustController {
     @ResponseBody
     public  ServerResponse<String> login(Customer customer, HttpServletRequest request, HttpServletResponse response) throws Exception{
 
+        System.out.println("登录失败，哈哈，笨");
+
         Customer customer1 = custService.login(customer);
         HttpSession session = request.getSession();
         //取出保存在session 中的验证码值
